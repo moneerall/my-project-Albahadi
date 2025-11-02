@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - عيادة سما لطب الأسنان</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(rgba(42, 124, 199, 0.8), rgba(48, 182, 209, 0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .contact-content {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-item i {
+            font-size: 1.8rem;
+            color: #2a7cc7;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .contact-details h3 {
+            color: #2a7cc7;
+            margin-bottom: 10px;
+        }
+        
+        .contact-form-container {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .contact-form-container h2 {
+            color: #2a7cc7;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2a7cc7;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #2a7cc7;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #30b6d1;
+        }
+        
+        .map-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #2a7cc7;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #e9f7fe;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .branches {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .branch-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .branch-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .branch-card i {
+            font-size: 2.5rem;
+            color: #2a7cc7;
+            margin-bottom: 20px;
+        }
+        
+        .branch-card h3 {
+            color: #2a7cc7;
+            margin-bottom: 15px;
+        }
+        
+        .branch-card p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .working-hours {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .hours-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-table td {
+            padding: 15px 10px;
+        }
+        
+        .hours-table td:first-child {
+            font-weight: 500;
+            color: #2a7cc7;
+        }
+        
+        .hours-table .closed {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-container {
+                padding: 25px;
+            }
+            
+            .branches-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-tooth"></i>
+                <h1>عيادة سما لطب الأسنان</h1>
+            </div>
+            <div class="header-info">
+                <p><i class="fas fa-phone"></i> 0551234567</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+            </ul>
+            <button class="appointment-btn" id="appointmentBtn">حجز موعد</button>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+            </ul>
+            <button class="appointment-btn">حجز موعد</button>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <section class="contact-hero">
+        <div class="container hero-content">
+            <h2>اتصل بنا</h2>
+            <p>نسعد بتواصلكم معنا في أي وقت، فريقنا جاهز لخدمتكم والإجابة على استفساراتكم</p>
+        </div>
+    </section>
+
+    <!-- محتوى الاتصال -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <h3>عنوان العيادة</h3>
+                            <p>حي الربيع، شارع الملك فهد، الرياض</p>
+                            <p>المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <h3>رقم الهاتف</h3>
+                            <p>0551234567</p>
+                            <p>0112345678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@sama-dental.com</p>
+                            <p>appointments@sama-dental.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-details">
+                            <h3>ساعات العمل</h3>
+                            <p>السبت - الخميس: 9 صباحًا - 9 مساءً</p>
+                            <p>الجمعة: مغلق</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-comments"></i>
+                        <div class="contact-details">
+                            <h3>خدمة العملاء</h3>
+                            <p>متاحة خلال ساعات العمل</p>
+                            <p>للحالات الطارئة خارج أوقات العمل: 0551234567</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h2>أرسل لنا رسالة</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">الاسم بالكامل *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">موضوع الرسالة *</label>
+                            <select id="subject" required>
+                                <option value="">اختر موضوع الرسالة</option>
+                                <option value="استفسار عام">استفسار عام</option>
+                                <option value="حجز موعد">حجز موعد</option>
+                                <option value="استفسار عن الخدمات">استفسار عن الخدمات</option>
+                                <option value="شكوى">شكوى</option>
+                                <option value="مقترح">مقترح</option>
+                                <option value="توظيف">توظيف</option>
+                                <option value="آخرى">آخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة *</label>
+                            <textarea id="message" required placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخريطة -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>موقعنا على الخريطة</h2>
+                <p>يمكنكم زيارة عيادتنا في الموقع التالي</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.098997806134!2d46.67285921500242!3d24.72741158411185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2z2KfZhNmF2LnZh9ivINin2YTZgtmI2YXZiiDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2YnYqSDYp9mE2K_ZgtmH2YTZitip!5e0!3m2!1sar!2ssa!4v1678887654321!5m2!1sar!2ssa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفروع -->
+    <section class="branches">
+        <div class="container">
+            <div class="section-title">
+                <h2>فروعنا</h2>
+                <p>نعمل على توسعة خدماتنا لتشمل مواقع متعددة لتكون أقرب إليكم</p>
+            </div>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>الفرع الرئيسي - الرياض</h3>
+                    <p>حي الربيع، شارع الملك فهد</p>
+                    <p>هاتف: 0112345678</p>
+                    <p>مواعيد العمل: 9 ص - 9 م</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>فرع الخرج</h3>
+                    <p>حي الرفاعى، شارع الأمير سعود</p>
+                    <p>هاتف: 0112345679</p>
+                    <p>مواعيد العمل: 9 ص - 6 م</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>فرع القصيم (قريباً)</h3>
+                    <p>حي المليداء، بريدة</p>
+                    <p>هاتف: سيتم الإعلان قريباً</p>
+                    <p>مواعيد العمل: سيتم الإعلان قريباً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم أوقات العمل -->
+    <section class="working-hours">
+        <div class="container">
+            <div class="section-title">
+                <h2>أوقات العمل</h2>
+                <p>نقدم خدماتنا خلال الأوقات التالية</p>
+            </div>
+            <div class="hours-container">
+                <table class="hours-table">
+                    <tr>
+                        <td>السبت</td>
+                        <td>9:00 صباحًا - 9:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الأحد</td>
+                        <td>9:00 صباحًا - 9:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الإثنين</td>
+                        <td>9:00 صباحًا - 9:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الثلاثاء</td>
+                        <td>9:00 صباحًا - 9:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الأربعاء</td>
+                        <td>9:00 صباحًا - 9:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الخميس</td>
+                        <td>9:00 صباحًا - 9:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الجمعة</td>
+                        <td class="closed">مغلق</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>أسئلة متكررة</h2>
+                <p>إجابات على أكثر الأسئلة شيوعاً بين عملائنا</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف يمكنني حجز موعد في العيادة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك حجز موعد من خلال عدة طرق: الاتصال بنا مباشرة على الأرقام المتاحة، تعبئة نموذج حجز الموعد على موقعنا الإلكتروني، أو زيارة العيادة مباشرة خلال ساعات العمل.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تقدمون خدمات طوارئ خارج أوقات العمل؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نوفر خدمة الطوارئ للألم الحاد والإصابات خارج أوقات العمل الرسمية. يمكنك الاتصال بالرقم 0551234567 للحالات الطارئة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي طرق الدفع المتاحة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نقبل الدفع النقدي وبطاقات الائتمان والمدى. كما نتعامل مع العديد من شركات التأمين الطبي. يرجى الاتصال بنا للاستفسار عن شركات التأمين المتعاقد معها.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل يمكنني إلغاء أو تغيير موعدي؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، يمكنك إلغاء أو تغيير موعدك قبل 24 ساعة على الأقل من الموعد المحدد. يرجى الاتصال بنا لإجراء التغيير المطلوب.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تقدمون استشارات مجانية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم استشارات مجانية أولية لتقييم حالتك وتقديم خطة العلاج المناسبة. يمكنك حجز استشارة مجانية من خلال موقعنا أو الاتصال بنا.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي إجراءات السلامة المتبعة في العيادة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نلتزم بأعلى معايير السلامة والنظافة. نقوم بتعقيم جميع الأدوات والأسطح بعد كل مريض، ونستخدم معدات الوقاية الشخصية، ونطبق بروتوكولات مكافحة العدوى وفقاً للمعايير العالمية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن العيادة</h3>
+                    <p>عيادة سما لطب الأسنان تقدم خدمات طبية متميزة في مجال طب وتجميل الأسنان باستخدام أحدث التقنيات العالمية وبتكلفة مناسبة.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="team.html">فريق العمل</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="services.html#treatment">علاج الأسنان</a></li>
+                        <li><a href="services.html#orthodontics">تقويم الأسنان</a></li>
+                        <li><a href="services.html#whitening">تبييض الأسنان</a></li>
+                        <li><a href="services.html#implant">زراعة الأسنان</a></li>
+                        <li><a href="services.html#children">طب أسنان الأطفال</a></li>
+                        <li><a href="services.html#surgery">جراحة الفم والأسنان</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> حي الربيع، شارع الملك فهد، الرياض</p>
+                        <p><i class="fas fa-phone"></i> 0551234567 - 0112345678</p>
+                        <p><i class="fas fa-envelope"></i> info@sama-dental.com</p>
+                        <p><i class="fas fa-clock"></i> السبت - الخميس: 9 ص - 9 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; عيادة سما لطب الأسنان 2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نموذج حجز الموعد -->
+    <div class="appointment-modal" id="appointmentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>حجز موعد</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="appointment-name">الاسم بالكامل</label>
+                    <input type="text" id="appointment-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-phone">رقم الهاتف</label>
+                    <input type="tel" id="appointment-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-service">نوع الخدمة</label>
+                    <select id="appointment-service" required>
+                        <option value="">اختر الخدمة</option>
+                        <option value="علاج الأسنان">علاج الأسنان</option>
+                        <option value="تقويم الأسنان">تقويم الأسنان</option>
+                        <option value="تبييض الأسنان">تبييض الأسنان</option>
+                        <option value="زراعة الأسنان">زراعة الأسنان</option>
+                        <option value="طب أسنان الأطفال">طب أسنان الأطفال</option>
+                        <option value="جراحة الفم والأسنان">جراحة الفم والأسنان</option>
+                        <option value="استشارة">استشارة</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">التاريخ المفضل</label>
+                    <input type="date" id="appointment-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-time">الوقت المفضل</label>
+                    <select id="appointment-time" required>
+                        <option value="">اختر الوقت</option>
+                        <option value="9:00 ص">9:00 ص</option>
+                        <option value="10:00 ص">10:00 ص</option>
+                        <option value="11:00 ص">11:00 ص</option>
+                        <option value="12:00 م">12:00 م</option>
+                        <option value="1:00 م">1:00 م</option>
+                        <option value="2:00 م">2:00 م</option>
+                        <option value="3:00 م">3:00 م</option>
+                        <option value="4:00 م">4:00 م</option>
+                        <option value="5:00 م">5:00 م</option>
+                        <option value="6:00 م">6:00 م</option>
+                        <option value="7:00 م">7:00 م</option>
+                        <option value="8:00 م">8:00 م</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-notes">ملاحظات إضافية (اختياري)</label>
+                    <textarea id="appointment-notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">تأكيد الحجز</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // تفعيل الأسئلة الشائعة
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // إغلاق جميع العناصر الأخرى
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // تبديل العنصر الحالي
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // معالجة نموذج الاتصال
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // هنا يمكن إضافة كود إرسال البيانات إلى الخادم
+                    const name = document.getElementById('name').value;
+                    const subject = document.getElementById('subject').value;
+                    
+                    alert(`شكراً ${name}، تم استلام رسالتك حول ${subject} بنجاح. سوف نتواصل معك في أقرب وقت.`);
+                    
+                    // إعادة تعيين النموذج
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

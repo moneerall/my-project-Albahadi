@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات - عيادة سما لطب الأسنان</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-tooth"></i>
+                <h1>عيادة سما لطب الأسنان</h1>
+            </div>
+            <div class="header-info">
+                <p><i class="fas fa-phone"></i> 0551234567</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html" class="active">الخدمات</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+            <button class="appointment-btn" id="appointmentBtn">حجز موعد</button>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html" class="active">الخدمات</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+            <button class="appointment-btn">حجز موعد</button>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <section class="services-hero">
+        <div class="container hero-content">
+            <h2>خدماتنا</h2>
+            <p>اكتشف مجموعة الخدمات الشاملة التي نقدمها لصحة فمك وأسنانك</p>
+        </div>
+    </section>
+
+    <!-- الخدمات التفصيلية -->
+    <section class="services-detailed">
+        <div class="container">
+            <!-- علاج الأسنان -->
+            <div class="service-detail" id="treatment">
+                <div class="service-header">
+                    <i class="fas fa-tooth service-icon"></i>
+                    <h2 class="service-title">علاج الأسنان</h2>
+                </div>
+                <div class="service-content">
+                    <div class="service-text">
+                        <p>نقدم في عيادة سما أحدث طرق علاج الأسنان باستخدام تقنيات متطورة ومواد عالية الجودة. نهتم براحة المريض ونحرص على تقديم علاج فعال ودائم لمشاكل الأسنان المختلفة.</p>
+                        <div class="service-features">
+                            <h3>ما نقدمه في هذا المجال:</h3>
+                            <ul>
+                                <li>علاج تسوس الأسنان بحشوات تجميلية</li>
+                                <li>علاج جذور الأسنان (حشو العصب)</li>
+                                <li>تركيب التيجان والجسور</li>
+                                <li>علاج التهابات اللثة</li>
+                                <li>علاج حساسية الأسنان</li>
+                                <li>تركيب الطقم الجزئي والكامل</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <button class="service-btn" data-service="علاج الأسنان">حجز موعد</button>
+                            <button class="service-btn secondary">استشارة مجانية</button>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="علاج الأسنان">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- تقويم الأسنان -->
+            <div class="service-detail" id="orthodontics">
+                <div class="service-header">
+                    <i class="fas fa-teeth service-icon"></i>
+                    <h2 class="service-title">تقويم الأسنان</h2>
+                </div>
+                <div class="service-content">
+                    <div class="service-text">
+                        <p>نساعدك في الحصول على ابتسامة جميلة ومتناسقة من خلال علاج مشاكل إطباق الأسنان وتنظيمها باستخدام أحدث أنواع تقويم الأسنان الثابت والمتحرك.</p>
+                        <div class="service-features">
+                            <h3>أنواع التقويم المتاحة:</h3>
+                            <ul>
+                                <li>تقويم الأسنان المعدني التقليدي</li>
+                                <li>تقويم الأسنان الشفاف (السيراميك)</li>
+                                <li>تقويم الأسنان الداخلي (اللساني)</li>
+                                <li>تقويم الأسنان الشفاف القابل للإزالة</li>
+                                <li>تقويم ما قبل الجراحة</li>
+                                <li>المتابعة الدورية وضبط التقويم</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <button class="service-btn" data-service="تقويم الأسنان">حجز موعد</button>
+                            <button class="service-btn secondary">استشارة مجانية</button>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="تقويم الأسنان">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- تبييض الأسنان -->
+            <div class="service-detail" id="whitening">
+                <div class="service-header">
+                    <i class="fas fa-smile service-icon"></i>
+                    <h2 class="service-title">تبييض الأسنان</h2>
+                </div>
+                <div class="service-content">
+                    <div class="service-text">
+                        <p>استعد بياض أسنانك الطبيعي وثقتك بنفسك مع جلسات تبييض الأسنان المتقدمة التي نقدمها في عيادة سما. نستخدم أفضل المواد والتقنيات لضمان نتائج مذهلة وآمنة.</p>
+                        <div class="service-features">
+                            <h3>طرق التبييض المتاحة:</h3>
+                            <ul>
+                                <li>تبييض الأسنان بالليزر</li>
+                                <li>تبييض الأسنان بالضوء الأزرق</li>
+                                <li>تبييض الأسنان المنزلي بإشراف الطبيب</li>
+                                <li>تنظيف الأسنان الاحترافي</li>
+                                <li>إزالة البقع والتصبغات</li>
+                                <li>نصائح للحفاظ على بياض الأسنان</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <button class="service-btn" data-service="تبييض الأسنان">حجز موعد</button>
+                            <button class="service-btn secondary">استشارة مجانية</button>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1564422019956-f9f4d16d95e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="تبييض الأسنان">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زراعة الأسنان -->
+            <div class="service-detail" id="implant">
+                <div class="service-header">
+                    <i class="fas fa-implant service-icon"></i>
+                    <h2 class="service-title">زراعة الأسنان</h2>
+                </div>
+                <div class="service-content">
+                    <div class="service-text">
+                        <p>حلول دائمة ومتكاملة لاستبدال الأسنان المفقودة بأسنان صناعية ثابتة تبدو وتعمل كالأسنان الطبيعية. نستخدم أحدث أنظمة الزراعة العالمية لضمان نجاح العملية وراحة المريض.</p>
+                        <div class="service-features">
+                            <h3>خدمات الزراعة المتاحة:</h3>
+                            <ul>
+                                <li>زراعة الأسنان الفردية</li>
+                                <li>زراعة الأسنان المتعددة</li>
+                                <li>زراعة الأسنان الكاملة (الفك بالكامل)</li>
+                                <li>زراعة الأسنان الفورية</li>
+                                <li>ترميم عظام الفك</li>
+                                <li>المتابعة الدورية بعد الزراعة</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <button class="service-btn" data-service="زراعة الأسنان">حجز موعد</button>
+                            <button class="service-btn secondary">استشارة مجانية</button>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="زراعة الأسنان">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- طب أسنان الأطفال -->
+            <div class="service-detail" id="children">
+                <div class="service-header">
+                    <i class="fas fa-baby service-icon"></i>
+                    <h2 class="service-title">طب أسنان الأطفال</h2>
+                </div>
+                <div class="service-content">
+                    <div class="service-text">
+                        <p>نهتم بأسنان أطفالكم منذ ظهور أول سن وحتى اكتمال نمو الأسنان الدائمة. نقدم رعاية متخصصة في جو مريح وآمن مع استخدام تقنيات مناسبة للأطفال.</p>
+                        <div class="service-features">
+                            <h3>خدمات أسنان الأطفال:</h3>
+                            <ul>
+                                <li>فحص وتقييم صحة أسنان الأطفال</li>
+                                <li>علاج تسوس أسنان الأطفال</li>
+                                <li>تركيب الحشوات الوقائية</li>
+                                <li>تقويم أسنان الأطفال المبكر</li>
+                                <li>علاج مشاكل نمو الفكين</li>
+                                <li>توعية الأطفال والعائلة بالعناية بالأسنان</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <button class="service-btn" data-service="طب أسنان الأطفال">حجز موعد</button>
+                            <button class="service-btn secondary">استشارة مجانية</button>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1576097449790-4d4c1500d26a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="طب أسنان الأطفال">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- جراحة الفم والأسنان -->
+            <div class="service-detail" id="surgery">
+                <div class="service-header">
+                    <i class="fas fa-teeth-open service-icon"></i>
+                    <h2 class="service-title">جراحة الفم والأسنان</h2>
+                </div>
+                <div class="service-content">
+                    <div class="service-text">
+                        <p>نقوم بإجراء جراحات الفم والأسنان المختلفة بمهارة عالية وتقنيات متطورة. نهتم براحة المريض ونستخدم أحدث طرق التخدير والتقنيات الجراحية لضمان أفضل النتائج.</p>
+                        <div class="service-features">
+                            <h3>الجراحات المتاحة:</h3>
+                            <ul>
+                                <li>خلع الأسنان العادية والجراحية</li>
+                                <li>خلع أسنان العقل المطمورة</li>
+                                <li>جراحة الفكين التصحيحية</li>
+                                <li>علاج التهابات عظام الفك</li>
+                                <li>جراحة الوجه والفكين التجميلية</li>
+                                <li>علاج كسور الفك والأسنان</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <button class="service-btn" data-service="جراحة الفم والأسنان">حجز موعد</button>
+                            <button class="service-btn secondary">استشارة مجانية</button>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="جراحة الفم والأسنان">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسعار -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>باقات الأسعار</h2>
+                <p>نقدم باقات متنوعة تناسب جميع الاحتياجات والميزانيات</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>الباقة الأساسية</h3>
+                    <div class="price">300 <span>ريال</span></div>
+                    <ul class="pricing-features">
+                        <li>فحص وتشخيص شامل</li>
+                        <li>تنظيف الأسنان الاحترافي</li>
+                        <li>حشوة واحدة تجميلية</li>
+                        <li>استشارة طبية شاملة</li>
+                        <li>صور أشعة بسيطة</li>
+                    </ul>
+                    <button class="service-btn">اختيار الباقة</button>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>باقة العائلة</h3>
+                    <div class="price">800 <span>ريال</span></div>
+                    <ul class="pricing-features">
+                        <li>جميع خدمات الباقة الأساسية</li>
+                        <li>لأفراد العائلة (4 أفراد كحد أقصى)</li>
+                        <li>خصم 15% على العلاجات الإضافية</li>
+                        <li>متابعة مجانية لمدة 6 أشهر</li>
+                        <li>كشف دوري كل 3 أشهر</li>
+                    </ul>
+                    <button class="service-btn">اختيار الباقة</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>باقة الابتسامة</h3>
+                    <div class="price">1200 <span>ريال</span></div>
+                    <ul class="pricing-features">
+                        <li>جلسة تبييض كاملة</li>
+                        <li>تنظيف وتلميع الأسنان</li>
+                        <li>فحص وتقييم الابتسامة</li>
+                        <li>نصائح العناية اليومية</li>
+                        <li>متابعة بعد 3 أشهر</li>
+                    </ul>
+                    <button class="service-btn">اختيار الباقة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن العيادة</h3>
+                    <p>عيادة سما لطب الأسنان تقدم خدمات طبية متميزة في مجال طب وتجميل الأسنان باستخدام أحدث التقنيات العالمية وبتكلفة مناسبة.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="team.html">فريق العمل</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="services.html#treatment">علاج الأسنان</a></li>
+                        <li><a href="services.html#orthodontics">تقويم الأسنان</a></li>
+                        <li><a href="services.html#whitening">تبييض الأسنان</a></li>
+                        <li><a href="services.html#implant">زراعة الأسنان</a></li>
+                        <li><a href="services.html#children">طب أسنان الأطفال</a></li>
+                        <li><a href="services.html#surgery">جراحة الفم والأسنان</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> حي الربيع، شارع الملك فهد، الرياض</p>
+                        <p><i class="fas fa-phone"></i> 0551234567 - 0112345678</p>
+                        <p><i class="fas fa-envelope"></i> info@sama-dental.com</p>
+                        <p><i class="fas fa-clock"></i> السبت - الخميس: 9 ص - 9 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; عيادة سما لطب الأسنان 2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نموذج حجز الموعد -->
+    <div class="appointment-modal" id="appointmentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>حجز موعد</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="appointment-name">الاسم بالكامل</label>
+                    <input type="text" id="appointment-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-phone">رقم الهاتف</label>
+                    <input type="tel" id="appointment-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-service">نوع الخدمة</label>
+                    <select id="appointment-service" required>
+                        <option value="">اختر الخدمة</option>
+                        <option value="علاج الأسنان">علاج الأسنان</option>
+                        <option value="تقويم الأسنان">تقويم الأسنان</option>
+                        <option value="تبييض الأسنان">تبييض الأسنان</option>
+                        <option value="زراعة الأسنان">زراعة الأسنان</option>
+                        <option value="طب أسنان الأطفال">طب أسنان الأطفال</option>
+                        <option value="جراحة الفم والأسنان">جراحة الفم والأسنان</option>
+                        <option value="استشارة">استشارة</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">التاريخ المفضل</label>
+                    <input type="date" id="appointment-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-time">الوقت المفضل</label>
+                    <select id="appointment-time" required>
+                        <option value="">اختر الوقت</option>
+                        <option value="9:00 ص">9:00 ص</option>
+                        <option value="10:00 ص">10:00 ص</option>
+                        <option value="11:00 ص">11:00 ص</option>
+                        <option value="12:00 م">12:00 م</option>
+                        <option value="1:00 م">1:00 م</option>
+                        <option value="2:00 م">2:00 م</option>
+                        <option value="3:00 م">3:00 م</option>
+                        <option value="4:00 م">4:00 م</option>
+                        <option value="5:00 م">5:00 م</option>
+                        <option value="6:00 م">6:00 م</option>
+                        <option value="7:00 م">7:00 م</option>
+                        <option value="8:00 م">8:00 م</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-notes">ملاحظات إضافية (اختياري)</label>
+                    <textarea id="appointment-notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">تأكيد الحجز</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // تفعيل أزرار حجز الموعد للخدمات
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceButtons = document.querySelectorAll('.service-btn[data-service]');
+            const appointmentModal = document.getElementById('appointmentModal');
+            const serviceSelect = document.getElementById('appointment-service');
+            
+            serviceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const service = this.getAttribute('data-service');
+                    serviceSelect.value = service;
+                    appointmentModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
